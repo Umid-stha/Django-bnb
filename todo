@@ -1,0 +1,66 @@
+Django airbnb 
+
+install nextjs, create project (done)
+code for navbar (done)
+categories on the front page (done)
+static pages:
+    list properties on the front page (done)
+    detail page for properties (done)
+    landlord page (done)
+    My reservations (done)
+    My properties (done)
+    inbox page (done)
+    detail page for chat (done)
+User menu pop up (done)
+reusable modal window (done)
+log in model(error codes too) (done)
+signup model(error codes too) (done)
+
+Backend todos
+setup docker for django with postgresql, etc
+    intall drt, cors headers, etc
+create user model/config
+create app for properties
+create models and serializers for properties
+get properites in frontend and list them
+
+implement auth, login, signup and logout
+
+add properties from nextjs
+create modal
+api endpoint
+send data
+
+detail page for propeties
+book properites
+landlord page dynamic
+my properties dynamic
+my reservations dynamic
+set properties as favorites
+my favorities page dynamic
+make conversations dynamic
+
+ssetup websockets in the backend
+make it possible to connect
+send/recieve messages
+store messages
+start conversations
+
+setup serch filter
+    modal for search filter
+    country search
+    calendar for check in /check out dates
+    search details(number of guests, bedtooms, etc)
+    Api endpoints
+    choose between categories on the front page
+
+deployment:
+    seting up git/ github
+    create server on digital ocean and set it up
+    backend
+        create environment
+        get code from git
+        rest of server stuff
+    frontedn
+        node, nginx
+        get code from git
