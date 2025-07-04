@@ -17,8 +17,8 @@ log in model(error codes too) (done)
 signup model(error codes too) (done)
 
 Backend todos
-setup docker for django with postgresql, etc
-    intall drt, cors headers, etc
+setup docker for django with postgresql, etc (done)
+    intall drt, cors headers, etc (done)
 create user model/config
 create app for properties
 create models and serializers for properties
