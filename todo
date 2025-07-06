@@ -19,9 +19,10 @@ signup model(error codes too) (done)
 Backend todos
 setup docker for django with postgresql, etc (done)
     intall drt, cors headers, etc (done)
-create user model/config
-create app for properties
-create models and serializers for properties
+create user model/config (done)
+configure drf, cors, etc (done)
+create app for properties (done)
+create models and serializers for properties (done)
 get properites in frontend and list them
 
 implement auth, login, signup and logout
