@@ -23,7 +23,9 @@ create user model/config (done)
 configure drf, cors, etc (done)
 create app for properties (done)
 create models and serializers for properties (done)
-get properites in frontend and list them
+get properites in frontend and list them (done)
+
+create api service file and use it in properties list and all others (done)
 
 implement auth, login, signup and logout
 
