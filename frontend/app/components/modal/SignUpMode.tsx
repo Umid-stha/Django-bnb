@@ -29,7 +29,7 @@ const SignupModal = () => {
 
             signupModal.close()
 
-            router.push('/')
+            router.refresh()
         }else{
             const tmpErrors: string[] = Object.values(response).map((error:any) => {
                 return error

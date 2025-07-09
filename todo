@@ -27,7 +27,7 @@ get properites in frontend and list them (done)
 
 create api service file and use it in properties list and all others (done)
 
-implement auth, login, signup and logout
+implement auth, login, signup and logout (done)
 
 add properties from nextjs
 create modal

@@ -11,7 +11,7 @@ const LogoutButton: React.FC = () => {
     const submitLogout = async () => {
         resetAuthenticationCredentials()
 
-        router.push('/')
+        router.refresh()
     }
 
     return (
