@@ -29,10 +29,10 @@ create api service file and use it in properties list and all others (done)
 
 implement auth, login, signup and logout (done)
 
-add properties from nextjs
-create modal
-api endpoint
-send data
+add properties from nextjs (done)
+create modal (done)
+api endpoint (done)
+send data (done)
 
 detail page for propeties
 book properites
