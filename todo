@@ -34,16 +34,16 @@ create modal (done)
 api endpoint (done)
 send data (done)
 
-detail page for propeties
-book properites
-landlord page dynamic
-my properties dynamic
+detail page for propeties (done)
+book properites (done)
+landlord page dynamic (done)
+my properties dynamic (done)
 my reservations dynamic
 set properties as favorites
 my favorities page dynamic
 make conversations dynamic
 
-ssetup websockets in the backend
+setup websockets in the backend
 make it possible to connect
 send/recieve messages
 store messages

@@ -12,7 +12,7 @@ const Categories: React.FC<CategoryProps> = ({dataCategory, setCategory}) => {
             <div className="pt-3 cursor-pointer pb-6 flex items-center space-x-12" >
                 <div 
                     onClick={() => setCategory('Beach')}
-                    className={`pb-4 flex flex-col items-center space-y-2 border-b-2 ${dataCategory == 'beach' ? 'border-gray-800' : 'border-white'} opacity-60 hover:border-gary-200 hover:opacity-100`}>
+                    className={`pb-4 flex flex-col items-center space-y-2 border-b-2 ${dataCategory == 'Beach' ? 'border-gray-800' : 'border-white'} opacity-60 hover:border-gary-200 hover:opacity-100`}>
                     <Image alt="Beach" src="/vacations.png" height={20} width={20} />
                     <span className="text-sm">Beach</span>
                 </div>
