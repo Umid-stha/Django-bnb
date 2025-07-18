@@ -7,4 +7,5 @@ urlpatterns = [
     path('<uuid:id>', views.properties_detail, name = 'api_property_detail'),
     path('<uuid:id>/book/', views.book_property, name = 'api_book_property'),
     path('<uuid:id>/reservations/', views.property_reservations, name = 'api_property_reservation'),
+    path('<uuid:pk>/toggle_favorite/', views.toggle_favorite, name = 'api_toggle_favorite'),
 ]
