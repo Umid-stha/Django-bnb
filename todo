@@ -41,9 +41,13 @@ my properties dynamic (done)
 my reservations dynamic (done)
 set properties as favorites (done)
 my favorities page dynamic (done)
-make conversations dynamic
+make conversations dynamic (done)
 
 setup websockets in the backend
+    install packages
+    configurations
+    setup basic consumer
+    setup routing
 make it possible to connect
 send/recieve messages
 store messages
