@@ -44,11 +44,11 @@ my favorities page dynamic (done)
 make conversations dynamic (done)
 
 setup websockets in the backend
-    install packages
-    configurations
-    setup basic consumer
-    setup routing
-make it possible to connect
+    install packages (done)
+    configurations (done)
+    setup basic consumer (done)
+    setup routing (done)
+make it possible to connect (done)
 send/recieve messages
 store messages
 start conversations

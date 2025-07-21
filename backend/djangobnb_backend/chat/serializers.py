@@ -14,3 +14,15 @@ class ConversationListSerializer(serializers.ModelSerializer):
             'users',
             'modefied_at',
         ]
+
+class ConversationDetailSerailizer(serializers.ModelSerializer):
+    users = UserDetailSerilizers(many=True, read_only=True)
+    class Meta:
+        model = Conversations
+        fields = [
+            'id',
+            'users',
+            'modefied_at',
+        ]
+
+
