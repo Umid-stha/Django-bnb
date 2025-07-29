@@ -16,7 +16,10 @@ const LandlordDetailPage = async ({params}: {params: {id:string}}) => {
                         <Image src={landlord.avatar_url} width={200} height={200} className="rounded-full" alt="profile"/>
                         <h1 className="mt-6 text-2xl">{landlord.name}</h1>
                         {userId != params.id && (
-                            <ContactButton />
+                            <ContactButton 
+                                userId={userId}
+                                landlordId = {params.id}
+                            />
                         )}
                     </div>
                 </aside>

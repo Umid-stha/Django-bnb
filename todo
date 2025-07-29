@@ -49,9 +49,9 @@ setup websockets in the backend
     setup basic consumer (done)
     setup routing (done)
 make it possible to connect (done)
-send/recieve messages
-store messages
-start conversations
+send/recieve messages (done)
+store messages (done)
+start conversations (done)
 
 setup serch filter
     modal for search filter

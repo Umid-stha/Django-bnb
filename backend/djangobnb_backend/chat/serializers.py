@@ -25,4 +25,10 @@ class ConversationDetailSerailizer(serializers.ModelSerializer):
             'modefied_at',
         ]
 
+class ConversationMessageSerializer(serializers.ModelSerializer):
+    sent_to = UserDetailSerilizers(many=False, read_only=True)
+    created_by = UserDetailSerilizers(many=False, read_only=True)
 
+    class Meta:
+        model = ConversationMessage
+        fields =  ['id', 'body', 'sent_to', 'created_by']
