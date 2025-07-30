@@ -19,12 +19,44 @@ def properties_list(request):
         user = None
     favorites = []
     properties = Property.objects.all()
+
+    #filters
     is_favorites = request.GET.get('is_favorite', '')
     landlord_id = request.GET.get('landlord_id', '')
+
+    country = request.GET.get('country','')
+    category = request.GET.get('category','')
+    check_in = request.GET.get('checkIn','')
+    check_out = request.GET.get('checkOut','')
+    bedrooms = request.GET.get('numBedroom','')
+    guest = request.GET.get('numGuest','')
+    bathrooms = request.GET.get('numBathroom','')
+
+    if check_in and check_out:
+        exact_matches = Reservation.objects.filter(start_date = check_in) | Reservation.objects.filter(end_date = check_out)
+        overlay_matches = Reservation.objects.filter(start_date__lte=check_out, end_date__gte = check_out)
+        all_matches = []
+
+        for reservation in exact_matches or overlay_matches:
+            all_matches.append(reservation.property_id)
+
+        properties = properties.exclude(id__in = all_matches)
+    
     if landlord_id:
         properties = properties.filter(landlord_id=landlord_id)
     if is_favorites:
         properties = properties.filter(favorited__in=[user])
+    if guest:
+        properties = properties.filter(guest__gte=guest)
+    if bedrooms:
+        properties = properties.filter(bedrooms__gte=bedrooms)
+    if bathrooms:
+        properties = properties.filter(bathrooms__gte=bathrooms)
+    if country:
+        properties = properties.filter(country=country)
+    if category and category != 'undefined':
+        properties = properties.filter(category=category)
+
     serializer = PropertiesListSerializer(properties, many=True)
 
     if user:    

@@ -1,7 +1,14 @@
+'use client'
 import Image from "next/image"
+import useSearchModal from "@/app/hooks/useSearchModal"
+
 const SearchFilter = () => {
+    const searchModal = useSearchModal()
     return (
-        <div className="h-[64px] flex flex-row items-center justify-between lg:border border-gray-300 rounded-full lg:p-2">
+        <div 
+            onClick={() => searchModal.open('location')}
+            className="h-[64px] flex flex-row items-center justify-between lg:border border-gray-300 rounded-full lg:p-2"
+        >
             <div className="hidden lg:block">
                 <div className="flex flex-row items-center justify-between">
                     <div className="cursor-pointer px-2 w-[250px] h-[64px] flex flex-col justify-center rounded-full hover:bg-gray-100">

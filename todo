@@ -54,12 +54,15 @@ store messages (done)
 start conversations (done)
 
 setup serch filter
-    modal for search filter
-    country search
-    calendar for check in /check out dates
-    search details(number of guests, bedtooms, etc)
-    Api endpoints
-    choose between categories on the front page
+    modal for search filter (done)
+    country search (done)
+    calendar for check in /check out dates (done)
+    search details(number of guests, bedtooms, etc) (done)
+    Api endpoints (done)
+    choose between categories on the front page (done)
+
+refresh frontpage automatically (done)
+setup auth refresh token in frontend
 
 deployment:
     seting up git/ github

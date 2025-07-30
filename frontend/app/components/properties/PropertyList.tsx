@@ -1,8 +1,11 @@
 'use client';
 
+import { format } from 'date-fns'
 import apiService from "@/app/services/apiService";
+import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from "react";
 import PropertyListItem from "./PropertyListItem"
+import useSearchModal from "@/app/hooks/useSearchModal";
 
 export type PropertyType = {
     id: string;
@@ -18,7 +21,17 @@ interface PropertyListProps {
 }
 
 const PropertyList: React.FC<PropertyListProps> = ({landlord_id, favorites}) => {
+    const params = useSearchParams()
+    const searchModal = useSearchModal()
+    const country = searchModal.query.country
+    const numGuest = searchModal.query.guests
+    const numBathroom = searchModal.query.bathrooms
+    const numBedroom = searchModal.query.bedrooms
+    const checkIn = searchModal.query.checkIn
+    const checkOut = searchModal.query.checkOut
+    const category = searchModal.query.category
     const [properties, setProperties] = useState<PropertyType[]>([])
+    console.log(searchModal.query)
     const markFavorite = (id: string, is_favorite: boolean) => {
         const tmpProperties = properties.map((property: PropertyType) => {
             if( property.id == id) {
@@ -43,6 +56,38 @@ const PropertyList: React.FC<PropertyListProps> = ({landlord_id, favorites}) => 
             url += `?landlord_id=${landlord_id}`
         } else if (favorites){
             url += '?is_favorite=true'
+        } 
+        let urlQuery = '';
+
+        if (country) {
+            urlQuery += '&country=' + country
+            console.log(country)
+        }
+        if (numGuest) {
+            urlQuery += '&numGuest=' + numGuest
+        }
+        if (numBathroom) {
+            urlQuery += '&numBathroom=' + numBathroom 
+        }
+        if (numBedroom) {
+            urlQuery += '&numBedroom=' + numBedroom 
+        }
+        if (checkIn) {
+            urlQuery += '&checkIn=' + format(checkIn, 'yyyy-MM-dd')
+        }
+        if (checkOut) {
+            urlQuery += '&checkOut=' + format(checkOut, 'yyyy-MM-dd')
+        }
+        if (category) {
+            urlQuery += '&category=' + category
+        }
+
+        if (urlQuery.length) {
+            console.log('Query', urlQuery)
+
+            urlQuery = '?' + urlQuery.substring(1)
+
+            url += urlQuery
         }
 
         const tmpProperties = await apiService.get(url)
@@ -60,7 +105,7 @@ const PropertyList: React.FC<PropertyListProps> = ({landlord_id, favorites}) => 
 
     useEffect(() => {
         getProperties();
-    }, [])
+    }, [category, searchModal.query, params])
     
     return (
         <>

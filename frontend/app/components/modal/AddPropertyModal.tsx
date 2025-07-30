@@ -70,7 +70,7 @@ const AddPropertyModel = () => {
             if (response.success){
                 console.log('Success :-D')
                 propertyModal.close()
-                router.refresh()
+                router.push('/?added=true')
             }
             else{
                 console.log('Error');
